@@ -1,0 +1,1 @@
+Adicionar aqui o arquivo SQL para restauração do banco de dados na hora da build da imagem.

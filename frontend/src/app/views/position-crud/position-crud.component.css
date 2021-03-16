@@ -1,0 +1,14 @@
+button {
+    margin-bottom: 30px;
+}
+
+.red {
+    color: white;
+    background: linear-gradient( 115deg, #e01515 10%, #901414e8 95%);
+}
+
+button:hover{
+ background: linear-gradient( 115deg, #e01515 100%, #901414e8 19%);
+  
+}
+

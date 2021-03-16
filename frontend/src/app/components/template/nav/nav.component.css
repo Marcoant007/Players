@@ -1,0 +1,61 @@
+.sidenav {
+    background: linear-gradient(115deg, #e01515  0,  #610606e8 50%);
+    width: 200px;
+}
+
+.sidenav a {
+    color: #FFF;
+}
+
+.sidenav i {
+    padding-right: 10px;
+}
+
+.content {
+    padding: 16px;
+    background-color: #FFF;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    
+    
+
+}
+.title{
+    color: white;
+    font-size: 1.2rem;
+    
+}
+
+ a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+ .logo{
+     padding-top: -20px;
+   padding-left: 15px;
+    max-height: 68px;
+    max-width: 120px;
+    padding-bottom: 20px;
+}
+
+.nav .title-group {
+  
+    font-size: 1rem;
+    justify-content: center;
+  
+}
+.nav .title-group{
+    padding-left: 70px;
+}
+
+
+.nav .title-group i {
+    padding-right: 2px;
+   
+    vertical-align: middle;
+}

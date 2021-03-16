@@ -1,0 +1,9 @@
+.container{
+    padding: 10px;
+    display: grid;
+    width: 20%;
+}
+
+button {
+    margin: 20px 15px 0px 0px; 
+}

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+  
+   min-height: 60vh;
+   min-width: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 4px solid rgba(0,0,0,0.7);
+}
+
+main.container{
+    background: white;
+    max-width: 900px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 2px 2px 50px 2px rgba(10, 11, 12, 0.15);
+    border-radius: 8px;
+}
+main.player{
+
+  max-width: 900px;
+  min-height: 50vh;
+  padding: 2rem;
+  border-radius: 8px;
+ 
+}
+
+main img {
+
+  width: 471px;
+  height: 529px;
+  position: fixed;
+  margin-left: 349px;
+
+}
+
+main h2 {
+    font-weight: 600;
+    margin-bottom: 2rem;
+    position: relative;
+
+}
+
+main h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #f50d0d, #b90909);
+
+}
+label{
+    padding-right: 10px;
+    color: rgba(0, 0, 0, 0.938);
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+
+select{
+    color: black;
+    -webkit-appearance:none ;
+    -moz-appearance: none;
+    outline: none;
+    appearance: none;
+    font-family: "Poppins", sans-serif;
+    width: 200px;
+    border: 1px solid #ddd;
+    height: 25px;
+    background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #fdfbfb;
+    background-position: 170px center;
+}
+
+
+form .input-field{
+    margin-bottom: 1.5rem;
+}
+
+.input-field input {
+    width: 80%;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.925);
+}
+
+.input-field input::placeholder{
+    color: rgba(0,0,0,0.7);
+    opacity: 40%;
+}
+
+
+button {
+    margin-top: 2rem;
+    padding: 0.4rem;
+    color: white;
+   
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.savebutton {
+  background: linear-gradient(to left,#39d812, #1d7912 );
+}
+
+.savebutton:hover{
+    background: linear-gradient(to left,#3fcc1b, #1e9e0f );
+    font-weight: 600;
+}
+
+.cancelbutton{
+    background: linear-gradient(to left,#ec2308, #aa0909 );
+}
+
+.cancelbutton:hover{
+    background: linear-gradient(to left,#ec2308, #e91515 );
+    font-weight: 600;
+}
+
+button:hover{
+    letter-spacing: 0.5px;
+    
+}
+
+.input-skils{
+  width: 80%;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.7);
+}
+
+
+.input-skils .underline::before{
+  content: '';
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+}
+
+.input-field{
+    position: relative;
+    width: 85%;
+    color: rgba(32, 32, 32, 0.699);
+}
+
+.input-field .underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+
+}
+.input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(45deg, #f50d0d, #b90909);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1)
+}
+
+.jogadorimg {
+ 
+}
+
+
+

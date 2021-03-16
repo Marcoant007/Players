@@ -1,0 +1,30 @@
+  <table id="mytable">
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Titulos</th>
+    <th>Ações</th>
+  </tr>
+  <tbody>
+  <tr *ngFor="let team of teams">
+    <td>{{team.id}}</td>
+    <td>
+      {{team.name}}
+    </td>
+    <td>
+      <span style="color: rgb(226, 212, 10);" class="material-icons">
+        military_tech
+        </span>
+      {{team.awards}}
+    </td>
+    <td>
+      <i class="material-icons" style="cursor: pointer;" (click)="navigateToUpdate(team)"> edit</i>
+
+      <i class="material-icons" style="cursor: pointer;" (click)="delete(team.id)"> delete_forever &nbsp;</i>
+   
+    </td>
+  </tr>
+</tbody>
+</table>
+
+

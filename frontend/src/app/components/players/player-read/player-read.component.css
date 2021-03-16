@@ -1,0 +1,142 @@
+
+#mytable {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    border-collapse: separate;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  #mytable td, #mytable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  
+  }
+  
+  i:hover{
+    color: #ce1717
+  }
+  
+  #mytable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #mytable tr:hover {background-color: #ddd;}
+  
+  #mytable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #ce1717;
+    color: white;
+  }
+
+  .container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+  }
+
+ .name > label {
+    color: #f2f2f2;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 2px;
+     margin-left: 65px;
+   
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card > .right{
+    margin-left: 40%;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .card > .left {
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+.players {
+  width: 200px;
+  height: 300px;
+  background:linear-gradient(115deg, #b10a0a  0,  #380202e8 50%);
+  margin: 10px 50px;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  border: 8px solid #6b0303;
+  box-shadow: 10px 10px 10px rgba(0,0,0, 0.5);
+}
+
+img{
+  margin-top: -40px;
+}
+
+
+img:hover{
+  top: -20px;
+  -webkit-filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+  filter: drop-shadow(8px 7px 1px rgba(0,0,0,.5));
+  -webkit-transform: rotateZ(-360deg) scale(1.1);
+}
+
+h1 {
+  margin-left: -190px;
+  color: #e7e7e7;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+
+}
+
+.skill-container {
+ position: relative;
+ width: 100%;
+}
+.skill {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(to left, #b907ff, #4d0650 );
+  position: absolute;
+  left: -5px;
+  top: 8px;
+  border: 4px solid white;
+  color: white;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.skill > span {
+  font-size: 22px;
+}
+
+.name{
+  padding: 10px;
+  padding-top: 20px;
+  width: 200px;
+  border-radius: 20px;
+  max-height: 120px;
+  color: white;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,42 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" >
+        <span>
+            <a routerLink="/">
+                <img class="logo" src="assets/images/MRX.png"  alt="logo">
+                <span class="title">
+                    <strong> MXPlayer</strong>
+                    
+                </span>
+            </a>
+        </span>
+        <mat-nav-list class="nav-list">
+            <a mat-list-item routerLink="/">
+                <i class="material-icons" >
+                    home
+                </i>
+                Início
+            </a>
+            <a mat-list-item  routerLink="players">
+                <i class="material-icons" >
+                    people_alt
+                </i>
+                Jogadores
+            </a>
+            <a mat-list-item routerLink="teams">
+                <i class="material-icons">
+                    shield
+                </i>
+                Times
+            </a>
+            <a mat-list-item routerLink="positions">
+                <i class="material-icons">
+                    directions_run
+                </i>
+                Posições
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

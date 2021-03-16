@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <main class="player">
+    <img src="https://i.ibb.co/8P8PB4j/unnamed-2.png" alt="">
+  </main>
+
+
+
+
+
+
+  <main class="container">
+
+    <h2>Cadastre seus jogadores</h2>
+
+    <form action="" [formGroup]="formPlayer">
+      <div class="input-field">
+        <label for="">Nome:</label>
+        <input [formControlName]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
+        <div class="underline"></div>
+      </div>
+      <div class="input-field">
+        <label for="">Idade:</label>
+        <input formControlName="age" type="number" name="age" id="age" placeholder="Ex: 25">
+        <div class="underline">
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="">Nascionalidade:</label>
+        <input [(ngModel)]="player.nationality" type="text" name="nascionalidade" id="nascionalidade"
+          placeholder="Ex: Brasileiro">
+        <div class="underline">
+        </div>
+      </div>
+      <div class="input-field">
+        <label for="">Time:</label>
+        <select name="team" [(ngModel)]="player.team_id">
+          <option *ngFor="let team of teams " [ngValue]="team.id">{{team.name}}</option>
+        </select>
+        <div class="underline">
+        </div>
+      </div>
+      <h2 style="text-align: center;">Habilidades</h2>
+
+      <div class="input-skils">
+        <label for="">Passe:</label>
+        <input [(ngModel)]="player.pass" type="number" placeholder="98">
+        <div class="underline"></div>
+      </div>
+      <div class="input-skils">
+        <label for="">Defesa:</label>
+        <input [(ngModel)]="player.defense" type="number" placeholder="98">
+        <div class="underline"></div>
+      </div>
+      <div class="input-skils">
+        <label for="">Velocidade:</label>
+        <input [(ngModel)]="player.speed" type="number" placeholder="98">
+        <div class="underline"></div>
+      </div>
+      <div class="input-skils">
+        <label for="">Drible:</label>
+        <input [(ngModel)]="player.dri" type="number" placeholder="98">
+        <div class="underline"></div>
+      </div>
+      <div class="input-skils">
+        <label for="">Chute:</label>
+        <input [(ngModel)]="player.shoting" type="number" placeholder="98">
+        <div class="underline"></div>
+      </div>
+
+
+      <button class="savebutton" (click)="createPlayer()">
+        Salvar
+      </button>
+
+      <button class="cancelbutton" (click)="cancel()" color="danger">
+        Cancel
+      </button>
+    </form>
+  </main>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!--
+
+  <div class="input-field">
+        <label for="">Posição:</label>
+        <select name="position" [(ngModel)]="player.playerPositions" id="">
+        <option *ngFor="let position of positions " [ngValue]="position.id" >{{position.name_position_first}} </option>
+      </select>
+        <div class="underline">
+        </div>
+      </div>
+-->

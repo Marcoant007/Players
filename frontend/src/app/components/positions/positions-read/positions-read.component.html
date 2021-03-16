@@ -1,0 +1,32 @@
+<table id="mytable">
+    <tr>
+      <th>Id</th>
+      <th>Posições</th>
+      <th>Ações</th>
+    </tr>
+    <tbody>
+    <tr *ngFor="let position of positions">
+      <td>
+        {{position.id}}
+      </td>
+      <td>
+        {{position.name_position_first}}
+      </td>
+     
+      <td>
+        <i class="material-icons"  style="cursor: pointer;" (click)="navigateToUpdate(position)" > edit</i>
+  
+        <i class="material-icons"  style="cursor: pointer;" (click)="deletePosition(position.id)"  > delete_forever &nbsp;</i>
+     
+      </td>
+    </tr>
+  </tbody>
+  </table>
+
+  
+
+
+
+
+
+  

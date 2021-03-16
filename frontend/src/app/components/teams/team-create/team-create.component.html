@@ -1,0 +1,16 @@
+<div class="container">
+    <label for="">Nome:</label>
+    <input [(ngModel)]="team.name" type="text">
+
+    <label for="">Titulos:</label>
+   <input [(ngModel)]="team.awards" type="text">
+   
+   <button  (click)="saveTeam()" color="success">
+    Salvar
+</button>
+
+<button (click)="cancel()" color="danger">
+    Cancel
+</button>
+
+</div>

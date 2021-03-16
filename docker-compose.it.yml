@@ -1,0 +1,13 @@
+version: "3.7"
+services: 
+
+  playersdb:
+    build: 
+      context: ./container/playerdb
+    env_file: ./container/.env/playerdb/dev/.env
+    volumes: 
+      - pg_data:/var/lib/postgesql/data
+    ports: 
+      - "5433:5432"
+volumes: 
+  pg_data:
