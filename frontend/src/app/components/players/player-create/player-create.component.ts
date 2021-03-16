@@ -52,7 +52,7 @@ export class PlayerCreateComponent implements OnInit {
         fileNames.push(selectedFiles[i].name);
         this.files.add(selectedFiles[i]);
       }
-      //document.getElementById('customFile').innerHTML = fileNames.join(', ');
+      document.getElementById('customFile').innerHTML = fileNames.join(', ');
 
   }
 
