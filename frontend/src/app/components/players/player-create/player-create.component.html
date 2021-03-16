@@ -9,20 +9,27 @@
 </head>
 
 <body>
-  <main class="player">
+ <!-- <main class="player">
     <img src="https://i.ibb.co/8P8PB4j/unnamed-2.png" alt="">
   </main>
-
-
-
-
-
-
+-->
   <main class="container">
 
     <h2>Cadastre seus jogadores</h2>
+    <form action="" >
 
-    <form action="" [formGroup]="formPlayer">
+      <div class="custom-file">
+        <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)">
+       
+      </div>
+      <div >
+        <button  [disabled]="!files"  class="savebutton" (click)="onUpload()" >
+          Upload
+        </button>
+      </div>
+
+
+
       <div class="input-field">
         <label for="">Nome:</label>
         <input [formControlName]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
