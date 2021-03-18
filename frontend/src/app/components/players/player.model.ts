@@ -17,7 +17,7 @@ export class Player {
 
 
     constructor() {
-        
+        //this.playerPositions = [];
 
     }
 

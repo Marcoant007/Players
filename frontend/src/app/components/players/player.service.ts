@@ -33,10 +33,6 @@ export class PlayerService {
     return this.http.get<Player[]>(this.baseUrl).toPromise()
   }
 
-  public async path(player:Player){
-    return this.http.patch<Player>(this.baseUrl, player).toPromise()
-  }
-
   public async savePlayer(player: Player): Promise<Player>{
     return this.http.post<Player>(this.baseUrl, player).toPromise()
   }

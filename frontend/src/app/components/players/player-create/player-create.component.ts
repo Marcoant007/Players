@@ -17,10 +17,11 @@ import { PlayerService } from '../player.service';
 })
 export class PlayerCreateComponent implements OnInit {
 
-  selectedFile = null;
+
+  files: Set<File>;
 
 
-  
+
   players: Player;
   teams: Team[];
   positions: Positions[];
@@ -37,23 +38,34 @@ export class PlayerCreateComponent implements OnInit {
     private router: Router,
   ) { }
 
-
   async ngOnInit() {
 
     await this.init();
     this.player = new Player();
   }
 
-  onFileSelected(event:any){
-    this.selectedFile = event.target.files[0]
+  onChange(event:any) {
+      const selectedFiles = <FileList>event.srcElement.files;
+      const fileNames = [];
+      this.files = new Set();
+      for(let i = 0; i< selectedFiles.length; i++){
+        fileNames.push(selectedFiles[i].name);
+        this.files.add(selectedFiles[i]);
+      }
+      //document.getElementById('customFile').innerHTML = fileNames.join(', ');
+
   }
+
 
   async loadPlayer() {
     this.player = await this.playerService.findByIdPlayer(this.id)
     this.isUpdate = true;
 
   }
- 
+
+  async onUpload() {
+
+  }
 
   async savePlayer() {
     try {
@@ -80,6 +92,7 @@ export class PlayerCreateComponent implements OnInit {
   }
 
   async createPlayer() {
+    console.log('chegou ?')
     try {
       await this.playerService.savePlayer(this.player)
       this.router.navigate(['/players'])
