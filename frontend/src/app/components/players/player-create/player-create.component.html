@@ -19,25 +19,18 @@
     <form action="" >
 
       <div class="custom-file">
-        <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)">
-       
+        <input type="file" class="custom-file-input" id="customFile" (change)="onFileSelected($event)">
+        <button type="button" class="savebutton" > Upload</button>
       </div>
-      <div >
-        <button  [disabled]="!files"  class="savebutton" (click)="onUpload()" >
-          Upload
-        </button>
-      </div>
-
-
-
+     
       <div class="input-field">
         <label for="">Nome:</label>
-        <input [formControlName]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
+        <input [ngModel]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
         <div class="underline"></div>
       </div>
       <div class="input-field">
         <label for="">Idade:</label>
-        <input formControlName="age" type="number" name="age" id="age" placeholder="Ex: 25">
+        <input [ngModel]="player.age" type="number" name="age" id="age" placeholder="Ex: 25">
         <div class="underline">
         </div>
       </div>

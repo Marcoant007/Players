@@ -45,8 +45,6 @@ playersRouter.post('/', multer(multerConfig).single('avatar'), async (request, r
         const result = (defense2 + dri2 + pass2 + shoting2 + speed2) / 5
         const skill =  Math.round(result) 
 
-
-
         let avatar = file.location
         const players = await createdPlayer.execute(
             {
@@ -63,18 +61,7 @@ playersRouter.post('/', multer(multerConfig).single('avatar'), async (request, r
                 speed: +speed
             }
         )
-        console.log(name)
-        console.log(age)
-        console.log(nationality)
-        console.log(team_id)
-        console.log(avatar)
-        console.log(defense)
-        console.log(dri)
-        console.log(pass)
-        console.log(shoting)
-        console.log(speed)
-        console.log(skill)
-
+         
         return response.status(200).json(players)
     } catch (err) {
         return response.status(400).json({ error: err.message })
