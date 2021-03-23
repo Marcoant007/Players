@@ -4,9 +4,7 @@ export class Player {
     name: string;
     nationality: string;
     age: number;
-    // playerPositions?: playerHasPosition[]
     team_id: number;
-    team?: Team;
     pass: number;
     avatar?: string;
     defense: number;
@@ -14,6 +12,7 @@ export class Player {
     dri: number;
     shoting: number;
     skill?: number
+    team?: Team;
 
 
     constructor() {

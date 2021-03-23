@@ -16,19 +16,14 @@ import { PlayerService } from '../player.service';
   styleUrls: ['./player-create.component.css']
 })
 export class PlayerCreateComponent implements OnInit {
-
-
   files: Set<File>;
-
-
-
   players: Player;
   teams: Team[];
   positions: Positions[];
   isUpdate: boolean = false
   public id: number
 
-  player: Player = new Player();
+  player: Player;
 
 
   constructor(
@@ -39,45 +34,14 @@ export class PlayerCreateComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-
     await this.init();
     this.player = new Player();
   }
-
-  onChange(event:any) {
-      const selectedFiles = <FileList>event.srcElement.files;
-      const fileNames = [];
-      this.files = new Set();
-      for(let i = 0; i< selectedFiles.length; i++){
-        fileNames.push(selectedFiles[i].name);
-        this.files.add(selectedFiles[i]);
-      }
-      //document.getElementById('customFile').innerHTML = fileNames.join(', ');
-
-  }
-
 
   async loadPlayer() {
     this.player = await this.playerService.findByIdPlayer(this.id)
     this.isUpdate = true;
 
-  }
-
-  async onUpload() {
-
-  }
-
-  async savePlayer() {
-    try {
-      if (this.isUpdate) {
-        this.update()
-      } else {
-        this.savePlayer()
-      }
-      this.router.navigate(['players'])
-    } catch (error) {
-      alert(error.error.message)
-    }
   }
 
   async init() {
@@ -111,3 +75,18 @@ export class PlayerCreateComponent implements OnInit {
   }
 
 }
+
+
+
+ /* onChange(event:any) {
+      const selectedFiles = <FileList>event.srcElement.files;
+      const fileNames = [];
+      this.files = new Set();
+      for(let i = 0; i< selectedFiles.length; i++){
+        fileNames.push(selectedFiles[i].name);
+        this.files.add(selectedFiles[i]);
+      }
+      document.getElementById('customFile').innerHTML = fileNames.join(', ');
+
+  }
+*/ 

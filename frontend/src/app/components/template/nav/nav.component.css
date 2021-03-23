@@ -1,9 +1,18 @@
 .sidenav {
-    background: linear-gradient(115deg, #e01515  0,  #610606e8 50%);
+    background-image: url(https://i.ibb.co/gjG2qdN/7866.png);
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 200px;
 }
 
 .sidenav a {
+    color: #FFF;
+}
+
+.sidenav a:hover{
+    background:rgba(255, 248, 248, 0.486);
     color: #FFF;
 }
 

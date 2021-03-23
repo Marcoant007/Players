@@ -34,6 +34,9 @@ export class PlayerService {
   }
 
   public async savePlayer(player: Player): Promise<Player>{
+
+    console.log(player);
+    
     return this.http.post<Player>(this.baseUrl, player).toPromise()
   }
 

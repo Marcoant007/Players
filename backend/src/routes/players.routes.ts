@@ -12,6 +12,7 @@ const playersRouter = Router();
 
 
 playersRouter.patch('/avatar', multer(multerConfig).single('file'), async (request, response) => {
+    console.log("teste");
     console.log(request.file);
     let file: any = request.file;
     console.log(file.location);
@@ -26,7 +27,11 @@ playersRouter.get('/', async (request, response) => {
 
 playersRouter.post('/', multer(multerConfig).single('avatar'), async (request, response) => {
     try {
+        let file: any = request.file;
 
+        console.log("File");
+        console.log(file);
+        
         const { name, age, nationality, team_id, speed,
             dri,
             shoting,
@@ -35,7 +40,6 @@ playersRouter.post('/', multer(multerConfig).single('avatar'), async (request, r
         } = request.body;
         const createdPlayer = new CreatedPlayerService();
 
-        let file: any = request.file;
         let defense2 = Number.parseInt(defense);
         let dri2 = Number.parseInt(dri);
         let pass2 = Number.parseInt(pass);
@@ -45,38 +49,37 @@ playersRouter.post('/', multer(multerConfig).single('avatar'), async (request, r
         const result = (defense2 + dri2 + pass2 + shoting2 + speed2) / 5
         const skill =  Math.round(result) 
 
+        let avatar = undefined;
 
+        if (file != undefined) {
+            avatar = file.location
+        }
 
-        let avatar = file.location
+        let player =  {
+            name: name,
+            age: age,
+            nationality: nationality,
+            team_id: +team_id,
+            defense: +defense,
+            dri: +dri,
+            pass: +pass,
+            shoting: +shoting,
+            skill: +skill,
+            speed: +speed,
+            avatar: avatar,
+        };
+
+        console.log(player);
+        
+
         const players = await createdPlayer.execute(
-            {
-                name: name,
-                age: age,
-                nationality: nationality,
-                team_id: +team_id,
-                avatar: avatar,
-                defense: +defense,
-                dri: +dri,
-                pass: +pass,
-                shoting: +shoting,
-                skill: +skill,
-                speed: +speed
-            }
+            player
         )
-        console.log(name)
-        console.log(age)
-        console.log(nationality)
-        console.log(team_id)
-        console.log(avatar)
-        console.log(defense)
-        console.log(dri)
-        console.log(pass)
-        console.log(shoting)
-        console.log(speed)
-        console.log(skill)
 
         return response.status(200).json(players)
     } catch (err) {
+        console.log(err);
+        
         return response.status(400).json({ error: err.message })
     }
 })

@@ -9,21 +9,19 @@
 </head>
 
 <body>
- <!-- <main class="player">
+  <!-- <main class="player">
     <img src="https://i.ibb.co/8P8PB4j/unnamed-2.png" alt="">
   </main>
 -->
   <main class="container">
 
     <h2>Cadastre seus jogadores</h2>
-    <form action="" >
-
+    <form action="">
       <div class="custom-file">
-        <input type="file" class="custom-file-input" id="customFile" (change)="onChange($event)">
-       
+        <input type="file" class="custom-file-input" id="customFile" >
       </div>
-      <div >
-        <button  [disabled]="!files"  class="savebutton" (click)="onUpload()" >
+      <div>
+        <button [disabled]="!files" class="savebutton" >
           Upload
         </button>
       </div>
@@ -32,12 +30,12 @@
 
       <div class="input-field">
         <label for="">Nome:</label>
-        <input [formControlName]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
+        <input [(ngModel)]="player.name" type="text" name="name" id="name" placeholder="Nome do jogador">
         <div class="underline"></div>
       </div>
       <div class="input-field">
         <label for="">Idade:</label>
-        <input formControlName="age" type="number" name="age" id="age" placeholder="Ex: 25">
+        <input [(ngModel)]="player.age" type="number" name="age" id="age" placeholder="Ex: 25">
         <div class="underline">
         </div>
       </div>
@@ -83,12 +81,9 @@
         <input [(ngModel)]="player.shoting" type="number" placeholder="98">
         <div class="underline"></div>
       </div>
-
-
       <button class="savebutton" (click)="createPlayer()">
         Salvar
       </button>
-
       <button class="cancelbutton" (click)="cancel()" color="danger">
         Cancel
       </button>
