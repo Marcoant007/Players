@@ -1,10 +1,10 @@
 .sidenav {
-    background-image: url(https://i.ibb.co/gjG2qdN/7866.png);
+    background-image: url(https://i.ibb.co/yBtwTbg/Ur3gt6G.png);
     
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 200px;
+    width: 250px;
 }
 
 .sidenav a {
@@ -13,7 +13,7 @@
 
 .sidenav a:hover{
     background:rgba(255, 248, 248, 0.486);
-    color: #FFF;
+    color: FFF;
 }
 
 .sidenav i {
